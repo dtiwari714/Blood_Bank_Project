@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BloodBank.mdf" />
+    <Content Include="App_Data\BloodBank_log.ldf">
+      <DependentUpon>BloodBank.mdf</DependentUpon>
+    </Content>
     <Content Include="CSS_Work\login.css" />
     <Content Include="CSS_Work\MarqueeTools.css" />
     <Content Include="Donor_Information.aspx" />
