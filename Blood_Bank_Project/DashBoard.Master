@@ -50,13 +50,14 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="HomePage.aspx">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Doner</a></li>
+          <li><a class="m-2 nav-link scrollto active" href="HomePage.aspx">Home</a></li>
+            <li><a class="btn btn-success py-2 px-2 m-2 animated slideInDown" href="Login_Form.aspx">Sign In As User</a></li>
+         <%-- <li><a class="nav-link scrollto" href="#about">Doner</a></li>--%>
           <%--<li><a class="nav-link scrollto" href="#services">Services</a></li>--%>
-          <li><a class="nav-link scrollto " href="#portfolio">View Donor</a></li>
+<%--          <li><a class="nav-link scrollto " href="#portfolio">View Donor</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">View Patient</a></li>
-          <li><a class="nav-link scrollto" href="#testimonials">Blood Transfer</a></li>
-          <li><a class="nav-link scrollto" href="#testimonials">Blood Group</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Blood Transfer</a></li>--%>
+          <li><a class="btn btn-info py-2 px-2 m-2 animated slideInDown" href="#testimonials">Sign In As Admin</a></li>
         </ul>
           
         <i class="bi bi-list mobile-nav-toggle"></i>

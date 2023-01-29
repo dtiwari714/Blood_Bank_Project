@@ -48,7 +48,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Do You Have Account?</label>
-                                <a href="#about" style="color:aliceblue; font-size:10px">Sign Up</a>
+                                <a href="SignUp.aspx" style="color:aliceblue; font-size:10px">Sign Up As User</a>
                             </div>
 
                         </form>
