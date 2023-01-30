@@ -24,58 +24,57 @@
                 <div class="col-lg-12 login-title">
                     Sign Up As User
                 </div>
- 
+
                 <div class="col-lg-12 login-form">
                     <div class="col-lg-12 login-form">
-                        <form>
+                        <%--<form>--%>
                             <div class="form-group">
                                 <label class="form-control-label">Profile Image</label>
-                                <asp:Image ID="Image1" runat="server" ImageAlign="Middle" Class="rounded mx-auto d-block" />
+                                <asp:Image ID="Image1" runat="server" ImageAlign="Middle" Class="rounded mx-auto d-block" Height="200px" Width="200px" />
                                 <asp:FileUpload ID="FileUpload1" runat="server" Width="60%" Height="60%" />
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">NAME</label>
-                                <asp:TextBox ID="TextBox5" runat="server" type="text" class="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox5" runat="server" type="text" Class="form-control"></asp:TextBox>
                             </div>
                            <div class="form-group">
                                 <label class="form-control-label">EMAIL</label>
-                                <asp:TextBox ID="TextBox2" runat="server" type="text" class="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox2" runat="server" type="text" Class="form-control"></asp:TextBox>
                             </div>
                            <div class="form-group">
                                 <label class="form-control-label">CONTACT</label>
-                                <asp:TextBox ID="TextBox6" runat="server" type="text" class="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox6" runat="server" type="text" Class="form-control"></asp:TextBox>
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">USERNAME</label>
-                                <asp:TextBox ID="TextBox1" runat="server" type="text" class="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox1" runat="server" type="text" Class="form-control"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">PASSWORD</label>
-                                <asp:TextBox ID="TextBox3" runat="server" type="password" class="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TextBox3" runat="server" type="password" Class="form-control"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label class="form-control-label">COFIRM PASSWORD:</label>
-                                <asp:TextBox ID="TextBox4" runat="server" type="password" class="form-control"></asp:TextBox>
+                                <label class="form-control-label">CONFIRM PASSWORD:</label>
+                                <asp:TextBox ID="TextBox4" runat="server" type="password" Class="form-control"></asp:TextBox>
                             </div>
  
                             <div class="col-lg-12 loginbttm">
                                 <div class="col-lg-6 login-btm login-text">
                                     <!-- Error Message -->
+                                    
                                 </div>
                                 <div class="col-lg-6 login-btm login-button">
-                                    <button type="submit" class="btn btn-outline-primary">SIGN UP</button>
+                                    <asp:Button ID="Button1" runat="server" Text="Sign Up" Class="btn btn-primary" OnClick="Register_Click" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Do You Have Account?</label>
                                 <a href="Login_Form.aspx" style="color:aliceblue; font-size:10px">Sign In</a>
                             </div>
-
-                        </form>
+                        <%--</form>--%>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-2"></div>
             </div>
         </div>
     </div>

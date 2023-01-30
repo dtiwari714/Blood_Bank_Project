@@ -8,8 +8,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container mt-3" style="font-weight: bolder; text-transform: none; color: #C0C0C0; text-align:center; font-family: 'Times New Roman'; font-size: large;" >
-
     <table align="center" class="table table-info table-striped auto-style1" >
+        <tr>
+            <td>Blood Group Name</td>
+            <td><asp:TextBox ID="TextBox1" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine" Rows="10"></asp:TextBox>
+        </td>
+    
+    </table>
+        <div class="m-4">
+            <asp:Button ID="Button1" runat="server" Text="Submit" />
+        </div>
+
+    <%--<table align="center" class="table table-info table-striped auto-style1" >
         <tr>
             <td>Blood Group Name</td>
             <td>Receive Blood From</td>
@@ -50,6 +64,6 @@
             <td  style="font-size :medium ";>AB+ and AB-</td>
         </tr>
         
-         </table>
+         </table>--%>
 </div>
 </asp:Content>

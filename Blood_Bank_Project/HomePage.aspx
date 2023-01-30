@@ -26,15 +26,6 @@
     <link href="css/style.css" rel="stylesheet">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<%--  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="container text-center text-md-left" data-aos="fade-up">
-      <h1>Welcome to <span>Blood Donation Camp</span></h1>
-      <h2>Making a donation is the ultimate sign of solidarity. Actions speak louder than words</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
-    </div>
-  </section>--%>
-    <!-- End Hero -->
-
     <div class="container-fluid hero-header bg-light py-5 mb-0">
         <div class="container py-5">
             <div class="row g-5 align-items-center">

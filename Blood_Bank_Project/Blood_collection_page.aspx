@@ -8,23 +8,30 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container mt-3" style="font-weight: bolder; text-transform: none; color: #C0C0C0; text-align:center; font-family: 'Times New Roman'; font-size: large;" >
+   <div class="container mt-3" style="font-weight: bolder; text-transform: none; color: #C0C0C0; text-align:center; font-family: 'Times New Roman'; font-size: large;" >
 
     <table align="center" class="table table-info table-striped auto-style1" >
         <tr>
-            <td>Blood type</td>
-            <td>Hospital</td>
-            <td>No. of Bags</td>
-            <td>Date of collection</td>
-
+            <td>Hospital Name</td>
+            <td><asp:TextBox ID="TextBox1" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
         </tr>
         <tr>
-            <td  style="font-size :medium";>A+</td>
-            <td  style="font-size :medium ";>Sarthi Hospital</td>
-            <td  style="font-size :medium ";> 2 </td>
-            <td  style="font-size :medium ";>7/5/2022</td>
-
+            <td>Number of bags of Blood</td>
+            <td><asp:TextBox ID="TextBox2" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
         </tr>
-        </table>
-        </div>
+        <tr>
+            <td>Collection Date:</td>
+            <td><asp:TextBox ID="TextBox3" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>Nurse or Doctor Incharge</td>
+            <td><asp:TextBox ID="TextBox4" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>Remarks</td>
+            <td><asp:TextBox ID="TextBox5" runat="server" TextMode="MultiLine" Rows="10"></asp:TextBox></td>
+        </tr>
+    </table>
+
+</div>
 </asp:Content>

@@ -11,38 +11,64 @@
 
     <table align="center" class="table table-info table-striped auto-style1" >
         <tr>
-            <td>Name</td>
-            <td>Email Address</td>
-            <td>Blood group</td>
-            <td>Date of requiest</td>
-            <td>No.of bags</td>
-            <td>price per bag</td>
-            <td>status</td>
+            <td>Patient </td>
+            <td><asp:TextBox ID="TextBox1" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
         </tr>
         <tr>
-            <td>Verma Muna</td>
-            <td>munnaverma8780@gmail.com</td>
-            <td>B+</td>
-            <td>7/1/2023</td>
-            <td>2</td>
-            <td>200</td>
-            <td>
-                <asp:Button ID="Button1" runat="server" Text="Accept" />
-                <asp:Button ID="Button2" runat="server" Text="Reject" />
+            <td>Photo</td>
+            <td><asp:Image ID="Image1" runat="server" ImageAlign="Middle" Class="rounded mx-auto d-block" Height="200px" Width="200px" />
+                                <br />
+                                <asp:FileUpload ID="FileUpload1" runat="server" Width="60%" Height="60%" /></td>
+        </tr>
+        <tr>
+            <td>Blood group id</td>
+            <td><asp:TextBox ID="TextBox3" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><asp:TextBox ID="TextBox4" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>Region</td>
+            <td><asp:DropDownList ID="DropDownList1" runat="server" Width="70%" Height="100%">
+                            <asp:ListItem>East Region</asp:ListItem>
+                            <asp:ListItem>West Region</asp:ListItem>
+                            <asp:ListItem>South Region</asp:ListItem>
+                            <asp:ListItem>North Region</asp:ListItem>
+                        </asp:DropDownList>
             </td>
         </tr>
         <tr>
-            <td>Verma Muna</td>
-            <td>munnaverma8780@gmail.com</td>
-            <td>B+</td>
-            <td>7/1/2023</td>
-            <td>2</td>
-            <td>200</td>
+            <td>City</td>
+            <td><asp:DropDownList ID="DropDownList2" runat="server" Width="70%" Height="100%">
+                            <asp:ListItem>Surat</asp:ListItem>
+                            <asp:ListItem>Dwarka</asp:ListItem>
+                            <asp:ListItem>Rajkot</asp:ListItem>
+                            <asp:ListItem>Jamnagar</asp:ListItem>
+                            <asp:ListItem>Kutch</asp:ListItem>
+                        </asp:DropDownList></td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td><asp:TextBox ID="TextBox7" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><asp:TextBox ID="TextBox8" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><asp:TextBox ID="TextBox9" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>Remarks</td>
             <td>
-                <asp:Button ID="Button3" runat="server" Text="Accept" />
-                <asp:Button ID="Button4" runat="server" Text="Reject" />
+                <asp:TextBox ID="TextBox10" runat="server" TextMode="MultiLine" Rows="10"></asp:TextBox>   
             </td>
         </tr>
-         </table>
+    </table>
+        <div class="m-4">
+            <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="Submit_Click" />
+        </div>
 </div>
 </asp:Content>
