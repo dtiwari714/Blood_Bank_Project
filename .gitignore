@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Blood_Bank_Project/Web.Release.config
+/Blood_Bank_Project/Web.Debug.config
+/Blood_Bank_Project/Web.config
