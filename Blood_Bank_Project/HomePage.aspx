@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DashBoard.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="Blood_Bank_Project.HomePage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DashBoard.Master" AutoEventWireup="true" CodeFile="HomePage.aspx.cs" Inherits="Blood_Bank_Project.HomePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="CSS/MarqueeTools.css" rel="stylesheet" />
     		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>	

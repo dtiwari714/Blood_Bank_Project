@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DashBoard.master.cs" Inherits="Blood_Bank_Project.DashBoard" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DashBoard.master.cs" Inherits="Blood_Bank_Project.DashBoard" %>
 
 <!DOCTYPE html>
 
@@ -44,20 +44,13 @@
     <div class="container d-flex align-items-center">
       <div class="logo me-auto">
         <h1><a href="index.html">Blood Bank</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="m-2 nav-link scrollto active" href="HomePage.aspx">Home</a></li>
             <li><a class="btn btn-success py-2 px-2 m-2 animated slideInDown" href="Login_Form.aspx">Sign In As User</a></li>
-         <%-- <li><a class="nav-link scrollto" href="#about">Doner</a></li>--%>
-          <%--<li><a class="nav-link scrollto" href="#services">Services</a></li>--%>
-<%--          <li><a class="nav-link scrollto " href="#portfolio">View Donor</a></li>
-          <li><a class="nav-link scrollto" href="#testimonials">View Patient</a></li>
-          <li><a class="nav-link scrollto" href="#testimonials">Blood Transfer</a></li>--%>
-          <li><a class="btn btn-info py-2 px-2 m-2 animated slideInDown" href="#testimonials">Sign In As Admin</a></li>
+          <li><a class="btn btn-info py-2 px-2 m-2 animated slideInDown" href="Login_Form.aspx">Sign In As Admin</a></li>
         </ul>
           
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -81,14 +74,6 @@
         </div>
     </form>
     </div>
-
-
-<!--  <footer class="text-center text-lg-start" style="background-color: #000000;">
-    <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="/">The content Ends Here...!!</a>
-    </div>
-  </footer>-->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

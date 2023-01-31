@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Information_Forms.master.cs" Inherits="Blood_Bank_Project.Information_Forms" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Information_Forms.master.cs" Inherits="Blood_Bank_Project.Information_Forms" %>
 
 <!DOCTYPE html>
 
@@ -38,19 +38,17 @@
     <div class="container d-flex align-items-center">
       <div class="logo me-auto">
         <h1><a href="index.html">Blood Bank</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Doner</a></li>
+          <li><a class="nav-link scrollto active" href="HomePage.aspx">Home</a></li>
           <%--<li><a class="nav-link scrollto" href="#services">Services</a></li>--%>
-          <li><a class="nav-link scrollto " href="#portfolio">View Donor</a></li>
-          <li><a class="nav-link scrollto" href="#testimonials">View Patient</a></li>
-          <li><a class="nav-link scrollto" href="#testimonials">Blood Transfer</a></li>
-          <li><a class="nav-link scrollto" href="#testimonials">Blood Group</a></li>
+          <li><a class="nav-link scrollto " href="Donor_Information.aspx">Donor Register</a></li>
+          <li><a class="nav-link scrollto" href="Blood_Recipient.aspx">Patient Register</a></li>
+          <li><a class="nav-link scrollto" href="Blood_requests_page.aspx">Blood Request</a></li>
+          <li><a class="nav-link scrollto" href="Blood_group.aspx">Blood Group</a></li>
+            <li><a class="nav-link scrollto" href="#about">Logout</a></li>
         </ul>
           
         <i class="bi bi-list mobile-nav-toggle"></i>

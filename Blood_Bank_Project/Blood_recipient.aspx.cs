@@ -26,14 +26,13 @@ namespace Blood_Bank_Project
                 SqlCommand cmd = new SqlCommand("Insert into tbl_recipient values(@recipient_complete_name,@recipient_photo,@blood_group_id,@complete_address,@region,@city,@contact,@email_address,@age,@remarks)", conn);
                 cmd.Parameters.AddWithValue("recipient_complete_name", TextBox1.Text);
                 cmd.Parameters.AddWithValue("recipient_photo", imagelink);
-                cmd.Parameters.AddWithValue("blood_group_id", TextBox3.Text);
-                cmd.Parameters.AddWithValue("complete_address", TextBox4.Text);
+                cmd.Parameters.AddWithValue("complete_address", TextBox2.Text);
                 cmd.Parameters.AddWithValue("region", DropDownList1.SelectedValue);
-                cmd.Parameters.AddWithValue("city", DropDownList2.SelectedValue);
-                cmd.Parameters.AddWithValue("contact", TextBox7.Text);
-                cmd.Parameters.AddWithValue("email_address", TextBox8.Text);
-                cmd.Parameters.AddWithValue("age", TextBox9.Text);
-                cmd.Parameters.AddWithValue("remarks", TextBox10.Text);
+                cmd.Parameters.AddWithValue("city", DropDownList3.SelectedValue);
+                cmd.Parameters.AddWithValue("contact", TextBox5.Text);
+                cmd.Parameters.AddWithValue("email_address",TextBox6.Text);
+                cmd.Parameters.AddWithValue("age", TextBox3.Text);
+                cmd.Parameters.AddWithValue("remarks", TextBox4.Text);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 Response.Write("<script>alert(`Registration Has Been Saved Successfully`)</script>");
@@ -89,5 +88,4 @@ namespace Blood_Bank_Project
 
         }
     }
-}
 }

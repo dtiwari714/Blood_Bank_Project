@@ -182,6 +182,7 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="Blood_collection.aspx" />
     <Content Include="Blood_collection_page.aspx" />
     <Content Include="Blood_group.aspx" />
     <Content Include="Blood_recipient.aspx" />
@@ -286,9 +287,30 @@
     <Content Include="obj\Debug\Blood_Bank_Project.dll" />
     <Content Include="obj\Debug\Blood_Bank_Project.pdb" />
     <Content Include="SignUp.aspx" />
+    <Content Include="ViewBloodGroup.aspx" />
+    <Content Include="ViewBloodIssued.aspx" />
+    <Content Include="ViewBloodRequest.aspx" />
+    <Content Include="ViewDonor.aspx" />
+    <Content Include="ViewPatient.aspx" />
+    <Content Include="ViewUser.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Blood_collection.aspx.cs">
+      <DependentUpon>Blood_collection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blood_collection.aspx.designer.cs">
+      <DependentUpon>Blood_collection.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Blood_collection_page.aspx.cs">
       <DependentUpon>Blood_collection_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -368,6 +390,55 @@
     <Compile Include="SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewBloodGroup.aspx.cs">
+      <DependentUpon>ViewBloodGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBloodGroup.aspx.designer.cs">
+      <DependentUpon>ViewBloodGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBloodIssued.aspx.cs">
+      <DependentUpon>ViewBloodIssued.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBloodIssued.aspx.designer.cs">
+      <DependentUpon>ViewBloodIssued.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBloodRequest.aspx.cs">
+      <DependentUpon>ViewBloodRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBloodRequest.aspx.designer.cs">
+      <DependentUpon>ViewBloodRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDonor.aspx.cs">
+      <DependentUpon>ViewDonor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDonor.aspx.designer.cs">
+      <DependentUpon>ViewDonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPatient.aspx.cs">
+      <DependentUpon>ViewPatient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPatient.aspx.designer.cs">
+      <DependentUpon>ViewPatient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUser.aspx.cs">
+      <DependentUpon>ViewUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewUser.aspx.designer.cs">
+      <DependentUpon>ViewUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="DashBoard.Master" />
@@ -425,6 +496,7 @@
     <Content Include="obj\Debug\Blood_Bank_Project.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Admin.Master" />
     <None Include="packages.config" />
     <Content Include="scss\bootstrap.scss" />
     <Content Include="scss\bootstrap\scss\bootstrap-grid.scss" />

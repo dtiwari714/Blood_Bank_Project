@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Information_Forms.Master" AutoEventWireup="true" CodeBehind="Blood_recipient.aspx.cs" Inherits="Blood_Bank_Project.Blood_receiver" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Information_Forms.Master" AutoEventWireup="true" Inherits="Blood_Bank_Project.Blood_receiver" Codebehind="Blood_recipient.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -14,51 +14,56 @@
 
     <table align="center" class="table table-info table-striped auto-style1" >
         <tr>
-            <td>Date of Request</td>
+            <td>Recipient or Patient Name</td>
             <td><asp:TextBox ID="TextBox1" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
         </tr>
         <tr>
-            <td>Blood Group</td>
-            <td><asp:TextBox ID="TextBox2" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+            <td>Recipient photo</td>
+             <td><asp:Image ID="Image1" runat="server" ImageAlign="Middle" Class="rounded mx-auto d-block" Height="200px" Width="200px" />
+                 <asp:FileUpload ID="FileUpload1" runat="server" Width="60%" Height="60%" /></td>
         </tr>
         <tr>
-            <td>No.of bags</td>
-            <td><asp:DropDownList ID="DropDownList3" runat="server" Width="70%" Height="100%">
-                            <asp:ListItem>1</asp:ListItem>
-                            <asp:ListItem>2</asp:ListItem>
-                            <asp:ListItem>3</asp:ListItem>
-                            <asp:ListItem>4</asp:ListItem>
-                            <asp:ListItem>5</asp:ListItem>
-                        </asp:DropDownList></td>
+            <td>Complete Address</td>
+           <td><asp:TextBox ID="TextBox2" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
         </tr>
         <tr>
-            <td>Amount of Bags</td>
+            <td>Region</td>
             <td><asp:DropDownList ID="DropDownList1" runat="server" Width="70%" Height="100%">
-                            <asp:ListItem>100</asp:ListItem>
-                            <asp:ListItem>200</asp:ListItem>
-                            <asp:ListItem>300</asp:ListItem>
-                            <asp:ListItem>400</asp:ListItem>
+                            <asp:ListItem>East Region</asp:ListItem>
+                            <asp:ListItem>West REgion</asp:ListItem>
+                            <asp:ListItem>South Region</asp:ListItem>
+                            <asp:ListItem>North Region</asp:ListItem>
                         </asp:DropDownList></td>
         </tr>
         <tr>
-            <td>Purpose</td>
-            <td><asp:TextBox ID="TextBox5" runat="server" TextMode="MultiLine" Rows="10" ></asp:TextBox></td>
-
+            <td>City</td>
+            <td><asp:DropDownList ID="DropDownList3" runat="server" Width="70%" Height="100%">
+                            <asp:ListItem>Surat</asp:ListItem>
+                            <asp:ListItem>Rajkot</asp:ListItem>
+                            <asp:ListItem>Jamnagar</asp:ListItem>
+                            <asp:ListItem>Dwarka</asp:ListItem>
+                        </asp:DropDownList></td>
         </tr>
         <tr>
-            <td>Request_status</td>
-            <td><asp:DropDownList ID="DropDownList2" runat="server" Width="70%" Height="100%">
-                            <asp:ListItem>Accepted</asp:ListItem>
-                            <asp:ListItem>Not Accepted</asp:ListItem>
-                        </asp:DropDownList></td>
+            <td>Contact</td>
+            <td><asp:TextBox ID="TextBox5" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>Email Address</td>
+           <td>
+               <asp:TextBox ID="TextBox6" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
+        </tr>
+         <tr>
+            <td>Age</td>
+            <td><asp:TextBox ID="TextBox3" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
         </tr>
         <tr>
             <td>Remarks</td>
-            <td><asp:TextBox ID="TextBox7" runat="server" TextMode="MultiLine" Rows="10"></asp:TextBox></td>
+            <td><asp:TextBox ID="TextBox4" runat="server" TextMode="MultiLine" Rows="10" ></asp:TextBox></td>
         </tr>
     </table>
         <div class="m-4">
-            <asp:Button ID="Button1" runat="server" Text="Submit" />
+            <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Submit_Click" />
         </div>
 </div>
 

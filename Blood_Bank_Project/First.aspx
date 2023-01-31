@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="First.aspx.cs" Inherits="Blood_Bank_Project.First" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="First.aspx.cs" Inherits="Blood_Bank_Project.First" %>
 
 <!DOCTYPE html>
 
