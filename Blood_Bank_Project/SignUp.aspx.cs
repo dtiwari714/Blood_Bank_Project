@@ -16,26 +16,28 @@ namespace Blood_Bank_Project
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void Register_Click(object sender, EventArgs e)
         {
+            
             if (uploadimage() == true)
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Durgesh\source\repos\Blood_Bank_Project\Blood_Bank_Project\App_Data\BloodBank.mdf;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Durgesh\source\repos\Blood_Bank_Project1\Blood_Bank_Project\App_Data\BloodBank.mdf;Integrated Security=True");
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("Insert into tbl_user values(@username,@password,@avatar,@fullname,@contact,@email)", conn);
-                cmd.Parameters.AddWithValue("username", TextBox1.Text);
-                cmd.Parameters.AddWithValue("password", TextBox3.Text);
+                SqlCommand cmd = new SqlCommand("insert into tbl_user values(@username,@password,@avatar,@fullname,@contact,@email)", conn);
+                cmd.Parameters.AddWithValue("username", TextBox4.Text);
+                cmd.Parameters.AddWithValue("password", TextBox5.Text);
                 cmd.Parameters.AddWithValue("avatar", imagelink);
-                cmd.Parameters.AddWithValue("fullname", TextBox5.Text);
-                cmd.Parameters.AddWithValue("contact", TextBox6.Text);
+                cmd.Parameters.AddWithValue("fullname",TextBox1.Text);
+                cmd.Parameters.AddWithValue("contact", TextBox3.Text);
                 cmd.Parameters.AddWithValue("email", TextBox2.Text);
                 cmd.ExecuteNonQuery();
+                Session["fullname"]=TextBox1.Text.ToString();
                 conn.Close();
-                Response.Write("<script>alert(`Registration Has Been Saved Successfully`)</script>");
+                Response.Write("<script>alert(`registration has been saved successfully`)</script>");
             }
+            Response.Redirect("~/login_form.aspx");
         }
         private Boolean uploadimage()
         {
@@ -43,7 +45,7 @@ namespace Blood_Bank_Project
             if (FileUpload1.HasFile == true)
             {
 
-                String contenttype = FileUpload1.PostedFile.ContentType;
+                string contenttype = FileUpload1.PostedFile.ContentType;
 
                 if (contenttype == "image/jpeg")
                 {
@@ -57,30 +59,30 @@ namespace Blood_Bank_Project
                         int width = img.Width;
                         if (height <= 200 && width <= 200)
                         {
-                            FileUpload1.SaveAs(Server.MapPath("~/Profile_Img/") + TextBox1.Text + ".jpg");
-                            Image1.ImageUrl = "~/Profile_Img/" + TextBox1.Text + ".jpg";
-                            imagelink = "Profile_Img/" + TextBox1.Text + ".jpg";
+                            FileUpload1.SaveAs(Server.MapPath("~/profile_img/") + TextBox4.Text + ".jpg");
+                            Image1.ImageUrl = "~/profile_img/" + TextBox4.Text + ".jpg";
+                            imagelink = "profile_img/" + TextBox4.Text + ".jpg";
                             imagesaved = true;
                         }
                         else
                         {
-                            Response.Write("<script>alert(`Kindly Upload JPEG Image in Proper Dimensions 200 x 200`)</script>");
+                            Response.Write("<script>alert(`kindly upload jpeg image in proper dimensions 200 x 200`)</script>");
                         }
                     }
                     else
                     {
-                        Response.Write("<script>alert(`File Size exceeds 50 KB - Please Upload File Size Maximum 50 KB`)</script>");
+                        Response.Write("<script>alert(`file size exceeds 50 kb - please upload file size maximum 50 kb`)</script>");
                     }
 
                 }
                 else
                 {
-                    Response.Write("<script>alert(`Only JPEG/JPG Image File Acceptable - Please Upload Image File Again`)</script>");
+                    Response.Write("<script>alert(`only jpeg/jpg image file acceptable - please upload image file again`)</script>");
                 }
             }
             else
             {
-                Response.Write("<script>alert(`You have not selected any file - Browse and Select File First`)</script>");
+                Response.Write("<script>alert(`you have not selected any file - browse and select file first`)</script>");
             }
 
             return imagesaved;
@@ -88,4 +90,3 @@ namespace Blood_Bank_Project
         }
     }
 }
-    

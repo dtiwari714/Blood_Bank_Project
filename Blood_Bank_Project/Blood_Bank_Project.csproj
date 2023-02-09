@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin_Login.aspx" />
     <Content Include="App_Data\BloodBank.mdf" />
     <Content Include="App_Data\BloodBank_log.ldf">
       <DependentUpon>BloodBank.mdf</DependentUpon>
@@ -184,7 +185,7 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="Blood_collection.aspx" />
     <Content Include="Blood_collection_page.aspx" />
-    <Content Include="Blood_group.aspx" />
+    <Content Include="View_Blood_group.aspx" />
     <Content Include="Blood_recipient.aspx" />
     <Content Include="Blood_requests_page.aspx" />
     <Content Include="css\animate.css" />
@@ -202,7 +203,6 @@
     <Content Include="CSS_Work\login.css" />
     <Content Include="CSS_Work\MarqueeTools.css" />
     <Content Include="Donor_Information.aspx" />
-    <Content Include="First.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="forms\contact.php" />
     <Content Include="forms\Readme.txt" />
@@ -287,14 +287,13 @@
     <Content Include="obj\Debug\Blood_Bank_Project.dll" />
     <Content Include="obj\Debug\Blood_Bank_Project.pdb" />
     <Content Include="SignUp.aspx" />
-    <Content Include="ViewBloodGroup.aspx" />
+    <Content Include="Blood_Group.aspx" />
     <Content Include="ViewBloodIssued.aspx" />
     <Content Include="ViewBloodRequest.aspx" />
     <Content Include="ViewDonor.aspx" />
     <Content Include="ViewPatient.aspx" />
     <Content Include="ViewUser.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.Master.cs">
@@ -303,6 +302,13 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Login.aspx.cs">
+      <DependentUpon>Admin_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Login.aspx.designer.cs">
+      <DependentUpon>Admin_Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Blood_collection.aspx.cs">
       <DependentUpon>Blood_collection.aspx</DependentUpon>
@@ -318,12 +324,15 @@
     <Compile Include="Blood_collection_page.aspx.designer.cs">
       <DependentUpon>Blood_collection_page.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Blood_group.aspx.cs">
-      <DependentUpon>Blood_group.aspx</DependentUpon>
+    <Compile Include="Information_Forms.Master.designer.cs">
+      <DependentUpon>Information_Forms.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View_Blood_group.aspx.cs">
+      <DependentUpon>View_Blood_group.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Blood_group.aspx.designer.cs">
-      <DependentUpon>Blood_group.aspx</DependentUpon>
+    <Compile Include="View_Blood_group.aspx.designer.cs">
+      <DependentUpon>View_Blood_group.aspx</DependentUpon>
     </Compile>
     <Compile Include="Blood_recipient.aspx.cs">
       <DependentUpon>Blood_recipient.aspx</DependentUpon>
@@ -353,13 +362,6 @@
     <Compile Include="Donor_Information.aspx.designer.cs">
       <DependentUpon>Donor_Information.aspx</DependentUpon>
     </Compile>
-    <Compile Include="First.aspx.cs">
-      <DependentUpon>First.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="First.aspx.designer.cs">
-      <DependentUpon>First.aspx</DependentUpon>
-    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -370,9 +372,6 @@
     <Compile Include="Information_Forms.Master.cs">
       <DependentUpon>Information_Forms.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Information_Forms.Master.designer.cs">
-      <DependentUpon>Information_Forms.Master</DependentUpon>
     </Compile>
     <Compile Include="Login_Form.aspx.cs">
       <DependentUpon>Login_Form.aspx</DependentUpon>
@@ -390,12 +389,12 @@
     <Compile Include="SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewBloodGroup.aspx.cs">
-      <DependentUpon>ViewBloodGroup.aspx</DependentUpon>
+    <Compile Include="Blood_Group.aspx.cs">
+      <DependentUpon>Blood_Group.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewBloodGroup.aspx.designer.cs">
-      <DependentUpon>ViewBloodGroup.aspx</DependentUpon>
+    <Compile Include="Blood_Group.aspx.designer.cs">
+      <DependentUpon>Blood_Group.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewBloodIssued.aspx.cs">
       <DependentUpon>ViewBloodIssued.aspx</DependentUpon>
@@ -431,13 +430,6 @@
     </Compile>
     <Compile Include="ViewUser.aspx.designer.cs">
       <DependentUpon>ViewUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

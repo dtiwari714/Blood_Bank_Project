@@ -39,12 +39,11 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="HomePage.aspx">Home</a></li>
-          <%--<li><a class="nav-link scrollto" href="#services">Services</a></li>--%>
+          <li><a class="nav-link scrollto" href="HomePage.aspx">Home</a></li>
           <li><a class="nav-link scrollto " href="ViewDonor.aspx">View Donor</a></li>
           <li><a class="nav-link scrollto" href="ViewPatient.aspx">View Patient</a></li>
           <li><a class="nav-link scrollto" href="ViewBloodIssued.aspx">Blood Transfer</a></li>
-          <li><a class="nav-link scrollto" href="Blood_group.aspx">Blood Group</a></li>
+          <li><a class="nav-link scrollto" href="Blood_Group.aspx">Blood Group</a></li>
         </ul>
           
         <i class="bi bi-list mobile-nav-toggle"></i>

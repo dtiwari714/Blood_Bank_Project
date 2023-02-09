@@ -43,7 +43,7 @@
                                     <!-- Error Message -->
                                 </div>
                                 <div class="col-lg-6 login-btm login-button">
-                                    <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+                                    <asp:Button ID="Button1" runat="server" Text="Sign In As User" OnClick="Button1_Click"/>
                                 </div>
                             </div>
                             <div class="form-group">

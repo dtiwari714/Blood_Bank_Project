@@ -1,17 +1,45 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Information_Forms.Master" AutoEventWireup="true" Inherits="Blood_Bank_Project.Blood_requests_page" Codebehind="Blood_requests_page.aspx.cs" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Information_Forms.Master" AutoEventWireup="True" Inherits="Blood_Bank_Project.Blood_requests_page" Codebehind="Blood_requests_page.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <style type="text/css">
         .auto-style1 {
-            width: 45%;
+            width: 60%;
+            border: 2px solid #808080;
+            background-color: #1A2226;
+            text-align:center;
+        }
+
+        .auto-style2 {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 61%;
+            max-width: 1320px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            padding-right: calc(var(--bs-gutter-x) * .5);
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container mt-3" style="font-weight: bolder; text-transform: none; color: #C0C0C0; text-align:center; font-family: 'Times New Roman'; font-size: large;" >
+    <div class="auto-style2" style="align-content:center;margin-top:24px;margin-bottom:24px">
 
-    <table align="center" class="table table-info table-striped auto-style1" >
+        <table align="center" class="auto-style1">
+             <tr>
+                <td colspan="2" style="text-align:center; color: #FFFFFF; font-size:30px">Blood Request</td>
+            </tr>
         <tr>
-            <td>Date of Request</td>
+            <td><asp:Label ID="Label12" runat="server" Text="Recipient ID:" class="form-control-label" ForeColor="White"></asp:Label></td>
+            <td>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [recipient_id] FROM [tbl_recipient]"></asp:SqlDataSource>
+                <asp:DropDownList ID="DropDownList4" runat="server" DataSourceID="SqlDataSource1" DataTextField="recipient_id" DataValueField="recipient_id" Height="100%" Width="100%">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td><asp:Label ID="Label1" runat="server" Text="Date of Request:" class="form-control-label" ForeColor="White"></asp:Label></td>
              <td class="auto-style4">
                         <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Visible="False" Width="220px" OnSelectionChanged="Calendar1_SelectionChanged" SelectedDate="12/17/2022 00:56:07">
                             <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
@@ -30,11 +58,11 @@
                     </td>
         </tr>
         <tr>
-            <td>Blood Group</td>
+            <td><asp:Label ID="Label2" runat="server" Text="Blood Group:" class="form-control-label" ForeColor="White"></asp:Label></td>
             <td><asp:TextBox ID="TextBox1" runat="server" Height="100%" Width="70%"></asp:TextBox></td>
         </tr>
         <tr>
-            <td>No. Of Bags</td>
+            <td><asp:Label ID="Label3" runat="server" Text="No. Of Bags:" class="form-control-label" ForeColor="White"></asp:Label></td>
             <td><asp:DropDownList ID="DropDownList1" runat="server" Width="70%" Height="100%">
                             <asp:ListItem>1</asp:ListItem>
                             <asp:ListItem>2</asp:ListItem>
@@ -44,7 +72,7 @@
             </td>
         </tr>
         <tr>
-            <td>Amount Of Blood</td>
+            <td><asp:Label ID="Label4" runat="server" Text="Amount Of Blood:" class="form-control-label" ForeColor="White"></asp:Label></td>
             <td><asp:DropDownList ID="DropDownList2" runat="server" Width="70%" Height="100%">
                             <asp:ListItem>100mg</asp:ListItem>
                             <asp:ListItem>200mg</asp:ListItem>
@@ -54,27 +82,37 @@
                         </asp:DropDownList></td>
         </tr>
         <tr>
-            <td>Purpose</td>
+            <td><asp:Label ID="Label5" runat="server" Text="Purpose:" class="form-control-label" ForeColor="White"></asp:Label></td>
             <td><asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine" Rows="10"></asp:TextBox>   
             </td>
         </tr>
         <tr>
-            <td>Request Status</td>
+            <td><asp:Label ID="Label6" runat="server" Text="Request Status:" class="form-control-label" ForeColor="White"></asp:Label></td>
             <td><asp:DropDownList ID="DropDownList3" runat="server" Width="70%" Height="100%">
-                            <asp:ListItem>Accepted</asp:ListItem>
-                            <asp:ListItem>Not Accepted</asp:ListItem>
+                            <asp:ListItem>Delivered</asp:ListItem>
+                            <asp:ListItem>Not Delivered</asp:ListItem>
                         </asp:DropDownList></td>
         </tr>
         <tr>
-            <td>Remarks</td>
+            <td><asp:Label ID="Label7" runat="server" Text="Remarks:" class="form-control-label" ForeColor="White"></asp:Label></td>
             <td>
                 <asp:TextBox ID="TextBox10" runat="server" TextMode="MultiLine" Rows="10"></asp:TextBox>   
             </td>
         </tr>
+        <tr>
+            <td><asp:Label ID="Label8" runat="server" Text="User ID:" class="form-control-label" ForeColor="White"></asp:Label></td>
+            <td>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [user_id] FROM [tbl_user]"></asp:SqlDataSource>
+                <asp:DropDownList ID="DropDownList5" runat="server" DataSourceID="SqlDataSource2" DataTextField="user_id" DataValueField="user_id" Height="100%" Width="100%">
+                </asp:DropDownList>
+            </td>
+        </tr>
+         <tr>
+             <td colspan="2">
+                 <asp:Button ID="Button2" runat="server" Text="Submit" OnClick="Button1_Click" />
+             </td>
+        </tr>
     </table>
-        <div class="m-4">
-            <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click"/>
-        </div>
 </div>
     <footer id="footer">
     <div class="container d-md-flex py-3">

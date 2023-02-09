@@ -23,9 +23,10 @@ namespace Blood_Bank_Project
             {
                 SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Durgesh\source\repos\Blood_Bank_Project\Blood_Bank_Project\App_Data\BloodBank.mdf;Integrated Security=True");
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("Insert into tbl_recipient values(@recipient_complete_name,@recipient_photo,@blood_group_id,@complete_address,@region,@city,@contact,@email_address,@age,@remarks)", conn);
+                SqlCommand cmd = new SqlCommand("insert into tbl_recipient values(@recipient_complete_name,@recipient_photo,@blood_group_id,@blood_group_id,@complete_address,@region,@city,@contact,@email_address,@age,@remarks,@user_id)", conn);
                 cmd.Parameters.AddWithValue("recipient_complete_name", TextBox1.Text);
                 cmd.Parameters.AddWithValue("recipient_photo", imagelink);
+                cmd.Parameters.AddWithValue("blood_group_id", DropDownList1.SelectedValue);
                 cmd.Parameters.AddWithValue("complete_address", TextBox2.Text);
                 cmd.Parameters.AddWithValue("region", DropDownList1.SelectedValue);
                 cmd.Parameters.AddWithValue("city", DropDownList3.SelectedValue);
@@ -33,6 +34,7 @@ namespace Blood_Bank_Project
                 cmd.Parameters.AddWithValue("email_address",TextBox6.Text);
                 cmd.Parameters.AddWithValue("age", TextBox3.Text);
                 cmd.Parameters.AddWithValue("remarks", TextBox4.Text);
+                cmd.Parameters.AddWithValue("user_id", DropDownList2.SelectedValue);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 Response.Write("<script>alert(`Registration Has Been Saved Successfully`)</script>");

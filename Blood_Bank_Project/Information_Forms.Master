@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Information_Forms.master.cs" Inherits="Blood_Bank_Project.Information_Forms" %>
+﻿<%@ Master Language="C#" AutoEventWireup="True" Inherits="Blood_Bank_Project.Information_Forms" Codebehind="Information_Forms.master.cs" %>
 
 <!DOCTYPE html>
 
@@ -40,20 +40,21 @@
         <h1><a href="index.html">Blood Bank</a></h1>
       </div>
 
+
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="HomePage.aspx">Home</a></li>
-          <%--<li><a class="nav-link scrollto" href="#services">Services</a></li>--%>
+          <li><a class="nav-link scrollto" href="HomePage.aspx">Home</a></li>
           <li><a class="nav-link scrollto " href="Donor_Information.aspx">Donor Register</a></li>
           <li><a class="nav-link scrollto" href="Blood_Recipient.aspx">Patient Register</a></li>
           <li><a class="nav-link scrollto" href="Blood_requests_page.aspx">Blood Request</a></li>
-          <li><a class="nav-link scrollto" href="Blood_group.aspx">Blood Group</a></li>
-            <li><a class="nav-link scrollto" href="#about">Logout</a></li>
-        </ul>
-          
+          <li><a class="nav-link scrollto" href="View_Blood_group.aspx">View Blood Group</a></li>
+          <li><a onserverclick="AnchorButton_Click" runat="server" class="nav-link scrollto" href="HomePage.aspx">Logout</a></li>
+        </ul>  
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
+        <div class="conatiner" style="align-content:flex-end">
+            <asp:Label Class="nav" ID="Label1" runat="server" Text="Label" Font-Bold="True"></asp:Label>
+        </div>
       <div class="header-social-links d-flex align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -62,7 +63,7 @@
       </div>
     </div>
   </header><!-- End Header -->
-
+</div>
 
 
     <form id="form1" runat="server">
